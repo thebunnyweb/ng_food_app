@@ -1,0 +1,109 @@
+.l_wrapper {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
+    width: 400px;
+    height: auto;
+    min-height: 420px;
+    border-radius: 6px;
+    max-width: 450px;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 767px){
+      width: 100vw;
+          height: auto;
+          max-width: none;
+          border-radius: 0px;
+
+    }
+    .l_wrapper_form{
+      .l-login, .l-register{
+        padding: 0 0 30px;
+        &__header{
+          p.title {
+            text-align: center;
+            @include font(#fff, 24px, 400 );
+            text-align: center;
+            padding: 30px 0px;
+            background: #711fff;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            margin-bottom: 50px;
+          }
+        }
+        &__content {
+          form {
+            text-align: center;
+            > div {
+              margin: 30px 0px;
+            }
+            input {
+              width: 60%;
+              padding: 5px 10px 5px 0;
+              border: 0;
+              border-bottom: 2px solid #dedbdb;
+              transition: all .4s ease;
+              background: transparent;
+              @include font(#711fff, 14px, 600);
+              &:focus {
+                outline: 0;
+                border-bottom: 2px solid #711fff;
+              }
+              &.error{
+                border-bottom: 2px solid red;
+              }
+
+            }
+            p.err-msg, span.err-msg {
+              color: red;
+              font-size: 11px;
+              text-align: left;
+              width: 60%;
+              margin: 0 auto;
+              font-weight: 600;
+            }
+          }
+        }
+
+        &__footer {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+           p {
+            font-size: 14px;
+            color: #535353;
+            text-align: center;
+
+            a, button {
+              color: #711fff;
+              font-weight: 600;
+              text-decoration: none;
+              position: relative;
+              border: 0;
+              background: transparent;
+              cursor: pointer;
+            }
+            a:after, button::after{
+              content: "";
+              position:absolute;
+              bottom: -5px;
+              display: block;
+              width: 30px;
+              background: #711fff;
+              height: 2px;
+              left:0;
+              transition: width .3s ease;
+            }
+            a:hover::after, button:hover::after{
+              width: 60%;
+            }
+          }
+        }
+      }
+
+
+    }
+
+  }
+
+
